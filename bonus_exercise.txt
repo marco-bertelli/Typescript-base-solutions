@@ -1,0 +1,35 @@
+Esercizio: Gestione di un Sistema di Log
+
+Descrizione:
+Devi creare un piccolo sistema di logging in TypeScript che permetta di scrivere e leggere log da file. Il sistema deve supportare i seguenti requisiti:
+
+Scrittura di log su file:
+
+Devi scrivere un log in un file chiamato logs.txt. Ogni log deve contenere un timestamp, un livello di log (ad esempio, INFO, WARN, ERROR), e il messaggio del log.
+Il file di log deve contenere tutte le voci precedenti (deve essere un log append).
+Lettura dei log da file:
+
+Deve essere possibile leggere tutti i log dal file e stampare a console.
+I log devono essere restituiti in ordine cronologico.
+Filtro dei log:
+
+Implementa un metodo che permetta di filtrare i log in base al livello (INFO, WARN, ERROR).
+Gestione degli errori:
+
+Se il file di log non esiste, crealo automaticamente.
+Gestisci gli errori di lettura/scrittura (ad esempio, errori di permessi).
+Suggerimenti per l'implementazione:
+File System:
+
+Usa il modulo fs di Node.js per interagire con il file system.
+Timestamp:
+
+Utilizza la classe Date per generare un timestamp per ogni log.
+Filtraggio e gestione dei log:
+
+Scrivi i log come stringhe formattate, ad esempio: 2025-01-23 14:33:22 [INFO] Log message.
+Per leggere i log dal file, puoi usare fs.readFileSync o fs.readFile per caricare il contenuto e poi fare il parsing delle righe.
+TypeScript Tipi:
+
+Usa un'interfaccia LogEntry per rappresentare la struttura di ogni log.
+Assicurati di tipizzare correttamente le funzioni, inclusi i ritorni e i parametri.
