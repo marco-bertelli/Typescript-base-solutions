@@ -37,10 +37,18 @@ function processID(id: ID): string {
 // Exercise 5: Type Aliases and Literal Types
 // Create a type for card suits and a function to check if a card is black
 // Solution
-type Suit = "hearts" | "diamonds" | "clubs" | "spades";
+
+enum Cards {
+    hearts = "hearts",
+    diamonds = "diamonds",
+    clubs = "clubs",
+    spades = "spades"
+}
+
+type Suit = Cards;
 
 function isBlackSuit(suit: Suit): boolean {
-    return suit === "clubs" || suit === "spades";
+    return suit === Cards.clubs || suit === Cards.spades;
 }
 
 // Exercise 6: Classes and Access Modifiers
